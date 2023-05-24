@@ -13,6 +13,11 @@
   -webkit-text-size-adjust: 100%;
 }
 
+html {
+  height: 100%;
+  padding: 0;
+}
+
 #root {
   width: 100%;
 }
@@ -31,9 +36,6 @@ a {
 
 body {
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -68,25 +70,35 @@ button:focus-visible {
   position: sticky;
   top: 0px;
   left: 0px;
-  padding: 0px 5px 0px 5px;
+  padding: 0;
+  margin-top: -90px;
+  margin-bottom: -90px;
   mix-blend-mode: difference;
   background: none;
 }
 
-.Logo {
-  isolation: isolate;
+.LogoName {
+  font-weight: bolder;
 }
 
 .Navbar {
   display: flex;
   flex-direction: column;
+  align-items: end;
+  max-width: 180px;
+  position: sticky;
+  top: 0px;
+  left: 100%;
+  margin-bottom: -20px;
+  mix-blend-mode: difference;
+  background: none;
 }
 
 .Navlink {
   transition: 0.15s;
   color: white;
   text-decoration: none;
-  font-size: small;
+  font-size: large;
   padding: 8px;
 }
 
@@ -102,12 +114,10 @@ button:focus-visible {
   color: white;
 }
 
-.Navlink:hover:first-child {
-  width: 100%;
-}
-
 .Section {
-  padding: 1rem 180px 600px 180px;
+  min-height: 600px;
+  padding: 0 200px 0 200px;
+  text-align: center;
 }
 
 .Section:nth-of-type(odd) {
@@ -121,4 +131,23 @@ button:focus-visible {
 .Section * {
   mix-blend-mode: difference;
   color: white;
+}
+
+.Project {
+  mix-blend-mode: luminosity;
+}
+
+.ModalBackgroundBlur {
+  backdrop-filter: blur(5px);
+  background-color: black;
+  z-index: 999;
+}
+
+dialog {
+  border: none;
+  border-radius: 8px;
+  background-color: #111;
+  color: white;
+  min-width: 100px;
+  max-width: 500px;
 }
