@@ -47,6 +47,11 @@ h1 {
   line-height: 1.1;
 }
 
+video {
+  outline: none;
+  box-shadow: 2px 2px 8px #666;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -73,6 +78,7 @@ button:focus-visible {
   top: 0px;
   left: 0px;
   padding-right: 200px;
+  padding-left: 5px;
   margin-top: -90px;
   margin-bottom: -90px;
   mix-blend-mode: difference;
@@ -168,12 +174,15 @@ dialog {
   box-shadow: 0px 8px 32px #333;
 }
 
-dialog h3 {
+dialog * {
   color: black;
+  mix-blend-mode: normal;
+  max-width: 100%;
 }
 
-dialog * {
-  max-width: 100%;
+dialog > img {
+  mix-blend-mode: normal;
+  width: 600px;
 }
 
 dialog::-webkit-scrollbar {
