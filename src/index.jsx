@@ -24,6 +24,13 @@ function Sidebar() {
 
     return <div className="Sidebar">
         <h2 className="LogoName">Ethan Ciavolella</h2>
+        <div style={{display: 'inline-block'}}>
+            <a 
+                style={{paddingRight: '16px'}}
+                href='https://www.linkedin.com/in/ethan-ciavolella-962432193/'
+            ><img width='32px' src='li.svg'></img></a>
+            <a href='https://github.com/Saltswimmer/'><img width='32px' src='github-mark-white.svg'></img></a>
+        </div>
     </div>
 }
 
