@@ -70,16 +70,20 @@ function ProjectModal({texturl}) {
         fetchText();
     }, [texturl]);
 
-    return <dialog id={texturl}>
-        <div className="ModalBackgroundBlur">
-            <ReactMarkdown>{text}</ReactMarkdown>
-        </div>
-    </dialog>
+    return <div className="Isolate"><dialog
+        id={texturl}
+        onClose={() => document.body.classList.remove('NoScroll')}
+    >
+        <ReactMarkdown>{text}</ReactMarkdown>
+    </dialog></div>
 }
 
 function Project({src, caption, texturl}) {
 
-    return <span className='Project' onClick={() => document.getElementById(texturl).showModal()}>
+    return <span className='Project' onClick={() => {
+            document.getElementById(texturl).showModal();
+            document.body.classList.add('NoScroll');
+        }}>
         <img width={625} src={src} alt={caption}/>
         <h2>{caption}</h2>
         <ProjectModal texturl={texturl}/>
@@ -97,7 +101,7 @@ export default function Index() {
             <h1>Committed to excellence.<br />Driven by creativity.</h1>
         </div>
         <div id='about' className="Section">
-            <h2>About me</h2>
+            <h1>About me</h1>
             <p>
                 I earned my bachelor&apos;s degree in computer science
                 at Rowan University in May 2023.
@@ -111,9 +115,10 @@ export default function Index() {
             </p>
         </div>
         <div id='projects' className="Section">
-            <Project id={generate()} src='harbour.png' caption='Harbour' texturl='/projects/project-1.md'/>
-            <Project id={generate()} src='harbour.png' caption='Ochre' texturl='/projects/project-2.md'/>
-            <Project id={generate()} src='harbour.png' caption='Project Cranefly' texturl='/projects/project-3.md'/>
+            <h1>Projects</h1>
+            <Project id={generate()} src='harbour.png' caption='Harbour' texturl='/projects/project-1.md'/><br></br>
+            <Project id={generate()} src='harbour.png' caption='Ochre' texturl='/projects/project-2.md'/><br></br>
+            <Project id={generate()} src='harbour.png' caption='Project Cranefly' texturl='/projects/project-3.md'/><br></br>
         </div>
     </>
 }
