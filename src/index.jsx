@@ -198,7 +198,7 @@ export default function Index() {
         <div id='projects' className="Section">
             <h1>Projects</h1>
             <Project id={generate()} src='harbour.png' caption='Harbour' texturl='/projects/project-1.md'/><br></br>
-            <Project id={generate()} src='ochre_0.png' caption='Ochre' texturl='/projects/project-2.md'>
+            <Project id={generate()} src='ochre.png' caption='Ochre' texturl='/projects/project-2.md'>
                 <video controls loop width='500px'>
                     <source src='ochre_footage.mp4' type='video/mp4'/>
                 </video>
