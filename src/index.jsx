@@ -210,6 +210,9 @@ export default function Index() {
             <Project id={generate()} src='cranefly.png' caption='Project Cranefly' texturl='/projects/project-3.md'>
             </Project><br></br>
         </div>
-        <div id='footer' className="Section"><p>©2023 Ethan Ciavolella<br></br>For business or other inquiries, contact me at ethanciavo@gmail.com.</p></div>
+        <div id='footer' className="Section">
+            <p>©2023 Ethan Ciavolella<br></br>For business or other inquiries, contact me at ethanciavo@gmail.com.</p>
+            <a onClick={()=>document.querySelector('#top').scrollIntoView({behavior: 'smooth'})}>Back to top</a>
+        </div>
     </>
 }

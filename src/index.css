@@ -217,11 +217,12 @@ dialog a {
 }
 
 dialog::-webkit-scrollbar {
-  background-color: #999;
+  background-color: #444;
 }
 
 dialog::-webkit-scrollbar-thumb {
-  background-color: #444;
+  background-color: #999;
+  border-radius: 4px;
 }
 
 dialog::backdrop {
@@ -251,6 +252,15 @@ h4 {
 
 .MobileHeader {
   display: none;
+}
+
+dialog > h1 {
+  color: #111;
+}
+
+.Tooltip {
+  display: inline;
+  border-bottom: #555 dotted;
 }
 
 @media (max-width: 600px) {
@@ -289,10 +299,4 @@ h4 {
   dialog {
     color: black;
   }
-
-}
-
-.Tooltip {
-  display: inline;
-  border-bottom: #555 dotted;
 }
