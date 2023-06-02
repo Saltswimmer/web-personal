@@ -248,3 +248,42 @@ dialog::backdrop {
 h4 {
   cursor: pointer;
 }
+
+.MobileHeader {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .Project > img {
+    max-width: 80%;
+  }
+
+  .Section > p, h1, h2, ul, a {
+    color: white;
+    max-width: 80%;
+    mix-blend-mode: difference;
+  }
+
+  .Sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
+    padding: 5px;
+    margin: 0;
+  }
+
+  .LogoName {
+    font-size: xx-large;
+  }
+
+  .Navbar {
+    display: none;
+  }
+
+  .MobileHeader {
+    display: block;
+  }
+
+}
