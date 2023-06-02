@@ -286,4 +286,13 @@ h4 {
     display: block;
   }
 
+  dialog {
+    color: black;
+  }
+
+}
+
+.Tooltip {
+  display: inline;
+  border-bottom: #555 dotted;
 }

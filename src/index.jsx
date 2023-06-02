@@ -117,6 +117,12 @@ function Project({src, caption, texturl, children}) {
     </span>;
 }
 
+function TooltippedText({tooltip, children}) {
+    return <span className="Tooltip" title={tooltip}>
+        {children}
+    </span>
+}
+
 export default function Index() {
     return <>
         <span id='top' />
@@ -182,7 +188,8 @@ export default function Index() {
             <ul>
                 <li>B.S. Computer Science, 3.9/4.0 GPA</li>
                 <li>John H. Martinson Honors College graduate</li>
-                <li>2x Rowan University President&apos;s Scholars of Excellence List</li>
+                <li><TooltippedText tooltip="Awarded for earning a 4.0 GPA in a semester."
+                >2x Rowan University President&apos;s Scholars of Excellence List</TooltippedText></li>
                 <li>7x Rowan University Dean&apos;s List</li>
             </ul>
             <h2>About this site</h2>
