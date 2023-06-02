@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { generate } from "shortid";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { IoLogoReact } from "react-icons/io5";
@@ -61,11 +61,11 @@ function Navbar() {
     
 }
 
-function ProjectModal({texturl, videoEmbed, onClose}) {
+function ProjectModal({ texturl, videoEmbed, onClose }) {
     const [text, setText] = useState('');
-
+    const modal = useRef(null);
+    
     useEffect(() => {
-
         let fetchText = async function () {
             try {
                 const response = await fetch(texturl);
@@ -76,11 +76,19 @@ function ProjectModal({texturl, videoEmbed, onClose}) {
         }
 
         fetchText();
+
     }, [texturl]);
 
+    if (modal.current) {
+        modal.current.scrollTop = 0;
+    }
+    
     return <div className="Isolate"><dialog
         id={texturl}
-        onClose={onClose}
+        onClose={() => {
+            onClose();
+        }}
+        ref={modal}
     >
         {videoEmbed}
         <ReactMarkdown>{text}</ReactMarkdown>
@@ -95,7 +103,7 @@ function Project({src, caption, texturl, children}) {
         setOpen(false);
         document.body.classList.remove('NoScroll');
     }
-        
+    
     return <span className='Project' onClick={() => {
         if (!open) {
             document.getElementById(texturl).showModal();
@@ -105,7 +113,7 @@ function Project({src, caption, texturl, children}) {
     }}>
     <img width={625} src={src} alt={caption}/>
     <h2 style={{textAlign: 'center'}}>{caption}</h2>
-    <ProjectModal texturl={texturl} videoEmbed={children} onClose={handleClose}/>
+    <ProjectModal texturl={texturl} videoEmbed={children} onClose={handleClose} />
     </span>;
 }
 
@@ -124,7 +132,11 @@ export default function Index() {
             <h1>About me</h1>
             <p>
                 I earned my bachelor&apos;s degree in computer science
-                at Rowan University in May 2023. The languages I am most proficient at
+                at Rowan University in May 2023. My career interests include
+                web design, user interface/user experience, and application development.
+                I also develop video games as a hobby in my spare time.
+                
+                The languages I am most proficient at
                 include:
             </p>
             <ul>
@@ -162,6 +174,10 @@ export default function Index() {
                     </ul>
                 </li>
             </ul> 
+            <p>
+                As of June 2023, I am seeking employment for a full-time position.
+                Check my LinkedIn page for more information.
+            </p>
             <h2>Awards and Accomplishments</h2>
             <ul>
                 <li>B.S. Computer Science, 3.9/4.0 GPA</li>
@@ -178,7 +194,6 @@ export default function Index() {
         <div id='projects' className="Section">
             <h1>Projects</h1>
             <Project id={generate()} src='harbour.png' caption='Harbour' texturl='/projects/project-1.md'>
-                <img src='harbour.png' alt='Harbour home screen' width='500px'/>
             </Project><br></br>
             <Project id={generate()} src='ochre.png' caption='Ochre' texturl='/projects/project-2.md'>
                 <video controls loop width='500px'>
@@ -186,9 +201,8 @@ export default function Index() {
                 </video>
             </Project><br></br>
             <Project id={generate()} src='cranefly.png' caption='Project Cranefly' texturl='/projects/project-3.md'>
-                <img src='cranefly.png' alt='Cranefly' width='500px'/>
             </Project><br></br>
         </div>
-        <div id='footer' className="Section"><p>©2023 Ethan Ciavolella</p></div>
+        <div id='footer' className="Section"><p>©2023 Ethan Ciavolella.<br></br>For business inquiries, contact me at ethanciavo@gmail.com</p></div>
     </>
 }

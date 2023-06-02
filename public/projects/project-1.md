@@ -1,3 +1,5 @@
+![Harbour home screen](harbour.png "Harbour home screen")
+
 ## Harbour
 Harbour is a cross-platform chat application built by me and three other students for our senior project at Rowan University.
 

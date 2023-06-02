@@ -1,3 +1,5 @@
+![Cranefly](cranefly.png "Cranefly")
+
 ## Project Cranefly
 
 Project Cranefly was a semester project developed by me and a team of five other students for our software engineering course. The project was sponsored by an aerospace and defense company. The purpose of the application was to stress test Linux cgroups. cgroups are a feature of Linux operating systems that allows for resources to be partitioned between isolated groups of processes. This feature is essential for containerization software such as Docker. The final deliverable, which was presented to our sponsor at their office in South Jersey, featured a memory test program, a cpu test program, and a multithreaded control program.
