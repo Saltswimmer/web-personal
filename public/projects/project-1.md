@@ -12,3 +12,5 @@ I was primarily responsible for working on the frontend. I designed the original
 ### Project status
 
 As of right now, the project is functional but far from finished. We wanted to rewrite the chat interface using websockets, but ended up running out of time. We also never actually deployed the application anywhere.
+
+[Project repo](https://github.com/Saltswimmer/ru-seniorproj)

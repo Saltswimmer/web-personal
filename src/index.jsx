@@ -1,10 +1,9 @@
 /* eslint-disable react/prop-types */
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { generate } from "shortid";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { IoLogoReact } from "react-icons/io5";
 import { BsGithub } from "react-icons/bs";
-import { MdArrowBack, MdClose, MdArrowForward } from "react-icons/md";
 
 function Navlink({title, section, disable=false}) {
 
@@ -41,9 +40,9 @@ function Navbar() {
 
     useEffect(function () {
         const handleScroll = () => {
-            if (window.scrollY > 575) {
+            if (window.scrollY > 700) {
                 setHideTopLink(false);
-            } else if (window.scrollY < 565) {
+            } else if (window.scrollY < 675) {
                 setHideTopLink(true);
             }
         }
@@ -64,7 +63,6 @@ function Navbar() {
 
 function ProjectModal({texturl, videoEmbed, onClose}) {
     const [text, setText] = useState('');
-    const dialog = useRef(null);
 
     useEffect(() => {
 
@@ -83,47 +81,31 @@ function ProjectModal({texturl, videoEmbed, onClose}) {
     return <div className="Isolate"><dialog
         id={texturl}
         onClose={onClose}
-        ref={dialog}
     >
-        <div tabIndex={0} />
-        <div style={{display: 'flex', justifyContent: 'space-around', position: "sticky", background: "white"}}>
-            <MdArrowBack tabIndex={1}/>
-            <MdClose tabIndex={2} onClick={()=>dialog.current.close()}/>
-            <MdArrowForward tabIndex={3} onClick={()=>{}}/>
-        
-        </div>
-        <ReactMarkdown>{text}</ReactMarkdown>
         {videoEmbed}
+        <ReactMarkdown>{text}</ReactMarkdown>
+        <span style={{display: 'flex', justifyContent: 'center'}}><h4 style={{textAlign: "right"}} onClick={() => document.getElementById(texturl).close()}>Close</h4></span>
     </dialog></div>
 }
 
 function Project({src, caption, texturl, children}) {
     const [open, setOpen] = useState(false);
-    const modal = useRef(null);
 
     let handleClose = () => {
         setOpen(false);
         document.body.classList.remove('NoScroll');
     }
-
-    useEffect(() => {
-        if (open) {
-            document.addEventListener('click', (e) => {
-                if (modal.current && !modal.current.contains(e.target)) {
-                    document.getElementById(texturl).close();
-                }}
-            )
-        }
-    }, [open, texturl])
-
+        
     return <span className='Project' onClick={() => {
+        if (!open) {
             document.getElementById(texturl).showModal();
             document.body.classList.add('NoScroll');
             setOpen(true);
-        }}>
-        <img width={625} src={src} alt={caption}/>
-        <h2>{caption}</h2>
-        <ProjectModal ref={modal} texturl={texturl} videoEmbed={children} onClose={handleClose}/>
+        }
+    }}>
+    <img width={625} src={src} alt={caption}/>
+    <h2 style={{textAlign: 'center'}}>{caption}</h2>
+    <ProjectModal texturl={texturl} videoEmbed={children} onClose={handleClose}/>
     </span>;
 }
 
@@ -133,9 +115,10 @@ export default function Index() {
         <Sidebar />
         <Navbar />
 
-        <div className="Section">
-            <img src='logo.svg' alt='Ethan Ciavolella logo'/>
-            <h1>Committed to excellence.<br />Driven by creativity.</h1>
+        <div className="Section" style={{minHeight: "700px"}}>
+            <h1 style={{textAlign: "center",paddingBottom: "25px"}}>Committed to excellence.<br />Driven by creativity.</h1>
+            <br/>
+            <img src='logo.svg' alt='Ethan Ciavolella logo' style={{mixBlendMode: 'difference', maxWidth:'45%'}}/>
         </div>
         <div id='about' className="Section">
             <h1>About me</h1>
@@ -143,52 +126,49 @@ export default function Index() {
                 I earned my bachelor&apos;s degree in computer science
                 at Rowan University in May 2023. The languages I am most proficient at
                 include:
-                <ul>
-                    <li>Java</li>
-                    <li>Javascript</li>
-                    <li>C++</li>
-                    <li>Python</li>
-                </ul><br></br>
-                Below are some libraries and platforms I&apos;ve used over the years:
-                <ul>
-                    <li>Web and UI design
-                        <ul>
-                            <li>React</li>
-                            <li>CSS</li>
-                            <li>JavaFX</li>
-                        </ul>
-                    </li>
-                    <li>Databases
-                        <ul>
-                            <li>MySQL</li>
-                            <li>PostgreSQL</li>
-                        </ul>
-                    </li>
-                    <li>Scientific
-                        <ul>
-                            <li>Matplotlib</li>
-                            <li>MATLAB</li>
-                        </ul>
-                    </li>
-                    <li>Game development
-                        <ul>
-                            <li>Unity</li>
-                            <li>Unreal Engine 4</li>
-                            <li>Godot</li>
-                        </ul>
-                    </li>
-                </ul> 
             </p>
+            <ul>
+                <li>Java</li>
+                <li>Javascript</li>
+                <li>C++</li>
+                <li>Python</li>
+                <br></br>Below are some libraries and platforms I&apos;ve used over the years:
+            </ul>
+            <ul>
+                <li>Web and UI design
+                    <ul>
+                        <li>React</li>
+                        <li>CSS</li>
+                        <li>JavaFX</li>
+                    </ul>
+                </li>
+                <li>Databases
+                    <ul>
+                        <li>MySQL</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+                </li>
+                <li>Scientific
+                    <ul>
+                        <li>Matplotlib</li>
+                        <li>MATLAB</li>
+                    </ul>
+                </li>
+                <li>Game development
+                    <ul>
+                        <li>Unity</li>
+                        <li>Unreal Engine 4</li>
+                        <li>Godot</li>
+                    </ul>
+                </li>
+            </ul> 
             <h2>Awards and Accomplishments</h2>
-            <p>
-                <ul>
-                    <li>B.S. Computer Science, 3.9/4.0 GPA</li>
-                    <li>John H. Martinson Honors College graduate</li>
-                    <li>2x Rowan University President&apos;s Scholars of Excellence List</li>
-                    <li>7x Rowan University Dean&apos;s List</li>
-                </ul>
-            </p>
-            <br></br>
+            <ul>
+                <li>B.S. Computer Science, 3.9/4.0 GPA</li>
+                <li>John H. Martinson Honors College graduate</li>
+                <li>2x Rowan University President&apos;s Scholars of Excellence List</li>
+                <li>7x Rowan University Dean&apos;s List</li>
+            </ul>
             <h2>About this site</h2>
             <p>
                 This site was created using <a href='https://react.dev/'><IoLogoReact />React. </a>
@@ -197,14 +177,18 @@ export default function Index() {
         </div>
         <div id='projects' className="Section">
             <h1>Projects</h1>
-            <Project id={generate()} src='harbour.png' caption='Harbour' texturl='/projects/project-1.md'/><br></br>
+            <Project id={generate()} src='harbour.png' caption='Harbour' texturl='/projects/project-1.md'>
+                <img src='harbour.png' alt='Harbour home screen' width='500px'/>
+            </Project><br></br>
             <Project id={generate()} src='ochre.png' caption='Ochre' texturl='/projects/project-2.md'>
                 <video controls loop width='500px'>
                     <source src='ochre_footage.mp4' type='video/mp4'/>
                 </video>
-            </Project>
-            <br></br>
-            <Project id={generate()} src='harbour.png' caption='Project Cranefly' texturl='/projects/project-3.md'/><br></br>
+            </Project><br></br>
+            <Project id={generate()} src='cranefly.png' caption='Project Cranefly' texturl='/projects/project-3.md'>
+                <img src='cranefly.png' alt='Cranefly' width='500px'/>
+            </Project><br></br>
         </div>
+        <div id='footer' className="Section"><p>©2023 Ethan Ciavolella</p></div>
     </>
 }

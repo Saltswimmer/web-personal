@@ -13,17 +13,20 @@
    version="1.1"
    x="0px"
    y="0px"
-   viewBox="0 0 327.97 281.10001"
+   viewBox="0 0 367.95907 367.95909"
    xml:space="preserve"
    id="svg54"
    sodipodi:docname="icon.svg"
-   width="327.97"
-   height="281.10001"
+   width="367.95908"
+   height="367.95908"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"><metadata
    id="metadata60"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
-   id="defs58" /><sodipodi:namedview
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
+   id="defs58">
+	
+	
+</defs><sodipodi:namedview
    pagecolor="#ffffff"
    bordercolor="#666666"
    borderopacity="1"
@@ -37,12 +40,16 @@
    id="namedview56"
    showgrid="false"
    inkscape:zoom="1.6856283"
-   inkscape:cx="-5.9593323"
-   inkscape:cy="142.54083"
+   inkscape:cx="288.53958"
+   inkscape:cy="183.54244"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
-   inkscape:current-layer="svg54" />
+   inkscape:current-layer="svg54"><inkscape:grid
+     type="xygrid"
+     id="grid4554"
+     originx="-4.6716308e-06"
+     originy="-4.6313575e-07" /></sodipodi:namedview>
 <style
    type="text/css"
    id="style2">
@@ -57,7 +64,7 @@
    id="Layer_1"
    class="st0"
    style="display:none"
-   transform="translate(-121.54,-123.91)">
+   transform="translate(-113.98094,-49.111036)">
 	<g
    class="st1"
    id="g36"
@@ -133,15 +140,15 @@
    id="Layer_2"
    class="st0"
    style="display:none"
-   transform="translate(-121.54,-123.91)">
+   transform="translate(-113.98094,-49.111036)">
 	<polygon
    class="st3"
-   points="143.61,209.14 225.51,255 250.01,246.96 156.78,196.11 296.12,165.94 371.59,209.71 394.02,202.35 299.35,146.73 123.77,185.22 138.11,390.19 230.88,450.17 229.9,424.18 155.47,375.66 "
+   points="296.12,165.94 371.59,209.71 394.02,202.35 299.35,146.73 123.77,185.22 138.11,390.19 230.88,450.17 229.9,424.18 155.47,375.66 143.61,209.14 225.51,255 250.01,246.96 156.78,196.11 "
    id="polygon39"
    style="display:inline;fill:#39b54a" />
 	<polygon
    class="st4"
-   points="253.23,278.71 406.3,230.23 406.3,211.46 234.57,265.73 243.67,452.52 406.3,385.45 406.3,365.57 260.34,424.74 "
+   points="243.67,452.52 406.3,385.45 406.3,365.57 260.34,424.74 253.23,278.71 406.3,230.23 406.3,211.46 234.57,265.73 "
    id="polygon41"
    style="display:inline;fill:#009444" />
 </g>
@@ -149,7 +156,7 @@
    id="Layer_3"
    class="st0"
    style="display:none"
-   transform="translate(-121.54,-123.91)">
+   transform="translate(-113.98094,-49.111036)">
 	<g
    class="st5"
    id="g46"
@@ -166,16 +173,13 @@
 	</g>
 </g>
 <g
-   id="Layer_4"
-   transform="translate(-121.54,-123.91)"
-   style="stroke:#ffffff;stroke-opacity:1;fill:#ffffff;fill-opacity:1">
-	<polygon
-   points="139.54,226.02 300.49,226.02 300.53,204.06 167.17,204.06 286,141.91 405.79,141.91 438.31,123.91 281.58,123.91 121.54,207.61 121.54,222.06 121.54,405 300.13,405 300.16,387 139.54,387 "
-   id="polygon49"
-   style="stroke:#ffffff;stroke-opacity:1;fill:#ffffff;fill-opacity:1" />
-	<polygon
-   points="333.51,214.33 449.12,150.33 449.51,129.55 315.53,203.71 315.13,405.01 445.77,332.7 446.15,311.91 333.19,374.44 "
-   id="polygon51"
-   style="stroke:#ffffff;stroke-opacity:1;fill:#ffffff;fill-opacity:1" />
-</g>
+   id="g4585"><polygon
+     transform="translate(-113.98094,-84.706072)"
+     points="300.13,405 300.16,387 139.54,387 139.54,226.02 300.49,226.02 300.53,204.06 167.17,204.06 286,141.91 405.79,141.91 438.31,123.91 281.58,123.91 121.54,207.61 121.54,222.06 121.54,405 "
+     id="polygon49"
+     style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:15.11811066;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /><polygon
+     transform="matrix(1.029373,0,0,1,-102.67175,-85.299322)"
+     points="315.53,203.71 315.13,405.01 445.77,332.7 446.15,311.91 333.19,374.44 333.51,214.33 449.12,150.33 449.51,129.55 "
+     id="polygon51"
+     style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:14.90085316;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></g>
 </svg>
