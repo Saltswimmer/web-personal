@@ -187,7 +187,7 @@ export default function Index() {
             </ul>
             <h2>About this site</h2>
             <p>
-                This site was created using <a href='https://react.dev/'><IoLogoReact />React. </a>
+                This website was created using <a href='https://react.dev/'><IoLogoReact />React. </a>
                 You can view the source code over on my <a href='https://github.com/Saltswimmer/web-personal/'><BsGithub />GitHub page.</a>
             </p>
         </div>
@@ -203,6 +203,6 @@ export default function Index() {
             <Project id={generate()} src='cranefly.png' caption='Project Cranefly' texturl='/projects/project-3.md'>
             </Project><br></br>
         </div>
-        <div id='footer' className="Section"><p>©2023 Ethan Ciavolella.<br></br>For business inquiries, contact me at ethanciavo@gmail.com</p></div>
+        <div id='footer' className="Section"><p>©2023 Ethan Ciavolella<br></br>For business or other inquiries, contact me at ethanciavo@gmail.com.</p></div>
     </>
 }
