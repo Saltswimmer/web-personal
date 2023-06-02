@@ -187,8 +187,8 @@ export default function Index() {
             </ul>
             <h2>About this site</h2>
             <p>
-                This website was created using <a href='https://react.dev/'><IoLogoReact />React. </a>
-                You can view the source code over on my <a href='https://github.com/Saltswimmer/web-personal/'><BsGithub />GitHub page.</a>
+                This website was created using <a style={{display:"inline-block"}} href='https://react.dev/'><IoLogoReact />React.</a><br></br>
+                You can view the source code over on my <a style={{display:"inline-block"}} href='https://github.com/Saltswimmer/web-personal/'><BsGithub />GitHub page.</a>
             </p>
         </div>
         <div id='projects' className="Section">
