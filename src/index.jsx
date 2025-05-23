@@ -138,17 +138,17 @@ export default function Index() {
             <h1>About me</h1>
             <p>
                 I earned my bachelor&apos;s degree in computer science
-                at Rowan University in May 2023. My career interests include
-                web design, user interface/user experience, and application development.
+                at Rowan University in May 2023. I am currently working
+                on earning my Master&apos;s in computer science at Rowan.
                 I also develop video games as a hobby in my spare time.
                 
                 The languages I am most proficient at
                 include:
             </p>
             <ul>
+                <li>C++</li>
                 <li>Java</li>
                 <li>Javascript</li>
-                <li>C++</li>
                 <li>Python</li>
                 <br></br>Below are some libraries and platforms I&apos;ve used over the years:
             </ul>
@@ -181,7 +181,6 @@ export default function Index() {
                 </li>
             </ul> 
             <p>
-                As of June 2023, I am seeking employment for a full-time position.
                 Check my LinkedIn page for more information.
             </p>
             <h2>Awards and Accomplishments</h2>
@@ -211,7 +210,7 @@ export default function Index() {
             </Project><br></br>
         </div>
         <div id='footer' className="Section">
-            <p>©2023 Ethan Ciavolella<br></br>For business or other inquiries, contact me at ethanciavo@gmail.com.</p>
+            <p>©2025 Ethan Ciavolella<br></br>For business or other inquiries, contact me at ethanciavo@gmail.com.</p>
             <a onClick={()=>document.querySelector('#top').scrollIntoView({behavior: 'smooth'})}>Back to top</a>
         </div>
     </>
